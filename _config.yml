@@ -24,7 +24,7 @@ github_username:  vishaladdala
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-modernist
+theme: jekyll-theme-midnight
 gems:
   - jekyll-feed
 
