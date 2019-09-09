@@ -14,14 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Browse Commits By Project
-email: hans.brough@yahoo.com
+email: vishal.naidu7@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   List of an organizations GitHub projects and browse recent commits
 baseurl: "browseCommitsByProject" # the subpath of your site, e.g. /blog
 # for local dev 'baseurl' should be set to an empty string. start server locally like so: jekyll serve --baseurl ''
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: letterati
-github_username:  hansbrough
+github_username:  vishaladdala
 
 # Build settings
 markdown: kramdown
