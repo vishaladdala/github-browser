@@ -1,0 +1,157 @@
+/*
+ * Common Font Properties
+ * uses the font mixins
+ */
+
+//fonts
+$fontFamily: AvenirLTStd-Medium, Helvetica Neue, Helvetica, Arial;
+$fontFamilyBold: AvenirLTStd-Heavy, Helvetica Neue, Helvetica, Arial;
+$fontFamilyBook: AvenirLTStd-Book, Helvetica Neue, Helvetica, Arial;
+$fontFamilyRoman: AvenirLTStd-Roman, Helvetica Neue, Helvetica, Arial;
+$fontFamilyBlack: AvenirLTStd-Black, Helvetica Neue, Helvetica, Arial;
+
+/* font sizing mixins */
+@mixin font-xx-small(){
+  font-size:0.4em;
+}
+@mixin font-x-small(){
+  font-size:0.6em;
+}
+@mixin font-small(){
+  font-size:0.8em;
+}
+@mixin font-medium(){
+  font-size:1em;
+}
+@mixin font-small-large(){
+  font-size:1.2em;
+}
+@mixin font-medium-large(){
+  font-size:1.5em;
+}
+@mixin font-large(){
+  font-size:1.8em;
+}
+@mixin font-big-large(){
+  font-size:2em;
+}
+@mixin font-x-large(){
+  font-size:2.4em;
+}
+@mixin font-xx-large(){
+  font-size:3em;
+}
+@mixin font-xxx-large(){
+  font-size:4em;
+}
+@mixin font-gigantic(){
+  font-size:10em;
+  font-weight:700;
+}
+
+@mixin font-thick(){
+  font-weight:700;
+}
+@mixin font-heavy(){
+  font-weight:500;
+}
+@mixin font-narrow(){
+  font-weight:300;
+}
+@mixin font-thin(){
+  font-weight:200;
+}
+
+//Size
+.xx-small {
+  @include font-xx-small();
+}
+
+.x-small {
+  @include font-x-small();
+}
+
+.small {
+  @include font-small();
+}
+
+.medium {
+  @include font-medium();
+}
+
+.small-large {
+  @include font-small-large();
+}
+
+.medium-large {
+  @include font-medium-large();
+}
+
+.large {
+  @include font-large();
+}
+
+.big-large {
+  @include font-big-large();
+}
+
+.x-large {
+  @include font-x-large();
+}
+
+.xx-large {
+  @include font-xx-large();
+}
+
+.xxx-large {
+  @include font-xxx-large();
+}
+
+.gigantic {
+  @include font-gigantic();
+}
+
+//weight
+
+.thin {
+  @include font-thin();
+}
+
+.narrow {
+  @include font-narrow();
+}
+
+.thick {
+  @include font-thick();
+}
+
+//color
+
+.on-dark-background {
+  color:#fff;
+}
+
+.on-light-background {
+  color:#333;
+}
+
+//Font Family Types
+.weight-book {
+  font-family: $fontFamilyBook
+}
+
+.weight-medium {
+  font-family: $fontFamily;
+}
+
+.weight-small {
+  font-family: $fontFamilyRoman;
+}
+
+.weight-heavy {
+  font-family: $fontFamilyBold;
+}
+
+.weight-black {
+  font-family: $fontFamilyBlack;
+}

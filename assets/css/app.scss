@@ -1,0 +1,190 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+@import "colors";
+@import "fonts";
+@import "media_queries";
+@import "transitions";
+@import "grid";
+
+.page-content {
+  padding-top:10px;
+}
+
+.app-content {
+  /*resets*/
+  ul {
+    margin-left:0;
+  }
+
+  .org-search {
+    background:$midniteBlue;
+    border-bottom: 2px solid $darkGray;
+    color: #fff;
+    padding: 15px;
+
+    .find-by-name {
+      width:100%;
+    }
+
+    .repo-icon {
+      color: #fff;
+      fill: currentColor;
+      margin-top: 5px;
+    }
+
+    .current-organization {
+
+    }
+  }
+
+  /* repos navbar */
+  .repos {
+    background:$inkyBlue;
+    color:#fff;
+    min-height:700px;
+    padding-left:15px;
+
+    .repo {
+      list-style:none;
+    }
+
+    .repo-commits {
+      color:$lightGray;
+
+      &.active {
+        border-bottom:2px solid $lightGray;
+        font-style: italic;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+  /* commit area */
+  .commits {
+    .section-title {
+      background:$lightGray;
+      color:$charcoal;
+      margin-bottom: 10px;
+      padding:10px;
+    }
+  }
+
+  .commit-group {
+    display: table;
+    width: 100%;
+    color: #6a737d;
+    table-layout: fixed;
+    border-bottom: 1px solid #e1e4e8;
+
+    .commit {
+      position: relative;
+      display: table-row;
+      list-style: none;
+    }
+
+    .avatar-cell {
+      width: 15%;
+    }
+
+    .avatar {
+      background-color: #6a737d;
+      border-radius: 3px;
+      border-style: none;
+      display: inline-block;
+      line-height: 1;
+      overflow: hidden;
+      vertical-align: middle;
+    }
+
+    .commit-link-cell {
+      width: 15%;
+      text-align: right;
+    }
+
+    .commit-desc {
+      pre {
+        color: #586069;
+        line-height: 1.45;
+        max-width: 700px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+  .table-list-cell {
+    position: relative;
+    display: table-cell;
+    padding: 8px 5px;
+    padding-right: 10px;
+    font-size: 12px;vertical-align: top;
+    border-top: 1px solid #eaecef;
+  }
+}
+
+/*-- sortable Mixin --*/
+.sort-filter-title {
+  position:relative;
+  border-bottom:1px solid #3E4066;
+  padding-bottom: 5px;
+}
+
+.sortable-mixin {
+  position: absolute;
+  text-transform: capitalize;
+  top:0;
+  z-index: 1;
+
+  &.align-right {
+    right: 5px;//$navGutter;
+    text-align: right;
+  }
+
+  &.align-left {
+    left:0;
+  }
+
+  .current-sort-item {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0ibSAxMyw2IC01LDUgLTUsLTUgeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg0K) no-repeat right center;
+    padding-right: 18px;
+  }
+
+  .sort-options-list {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+    overflow: hidden;
+    background: $grayBlue;
+    border: 1px solid #c8c9d1;
+    color:#fff;
+    margin-top:.4em;
+    list-style: none;
+    padding: 5px;
+    text-align: left;
+
+    li {
+      padding:3px 0;
+    }
+
+    &.open {
+      max-height: 2000px;
+      opacity: 1;
+      transition: all 0.2s ease-in;
+    }
+  }
+
+  .nav-link {
+    color:#c8c9d1;
+    cursor: pointer;
+
+    &:hover {
+      color:#fff;
+    }
+  }
+}

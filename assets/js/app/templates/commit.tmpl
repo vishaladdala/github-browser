@@ -1,0 +1,20 @@
+{{#this}}
+<li class="medium-large weight-medium commit" id="{{id}}" title="{{description}}">
+  <div class="table-list-cell avatar-cell"><img class="avatar" src="{{author.avatar_url}}" alt="@{{author.login}}" width="36" height="36"></div>
+  <div class="table-list-cell">
+    <p class="weight-heavy small-large commit-title">{{commit.message}}</p>
+    {{#if commit.description}}
+    <div class="commit-desc"><pre class="text-small">{{commit.description}}</pre></div>
+    {{/if}}
+    <div class="commit-meta commit-author-section">
+      {{author.login}} committed
+        <relative-time datetime="{{commit.committer.date}}" title="Aug 20, 2017, 8:01 PM PDT">{{commit.committer.date}}</relative-time>
+    </div>
+  </div>
+
+  <div class="table-list-cell commit-link-cell">
+    <a href="{{html_url}}" class="sha" target="_blank" title="view full commit details">{{commit.displaySha}}</a>
+  </div>
+
+</li>
+{{/this}}
